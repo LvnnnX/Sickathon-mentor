@@ -11,7 +11,7 @@ clear_background()
 make_footer()
 make_header()
 # st.write('hello world')
-conn: SQLConnection = st.experimental_connection('sickathon-mentor',type='sql')
+conn: SQLConnection = st.experimental_connection('db1',type='sql')
 df: pd.DataFrame = conn.query('select * from netflix_titles')
 
 
