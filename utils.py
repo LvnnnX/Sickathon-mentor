@@ -11,7 +11,6 @@ color_map[0] = color_map[1] = color_map[2] = '#7a1214'
 
 def viz_typeblock(df:pd.DataFrame) -> plt.Figure:
     """Visualisasi type block dari dataframe netflix_titles"""
-    fig, ax = plt.subplots()
     x = df.groupby(['type'])['type'].count()
     y = len(df)
     r = ((x/y)).round(2)
